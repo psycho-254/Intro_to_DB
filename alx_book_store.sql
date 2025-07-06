@@ -85,14 +85,14 @@ CREATE TABLE Orders(
 
 CREATE TABLE Order_Details (
     orderdetailid INT PRIMARY KEY,
-    order_id INT,
-    book_id INT,
+    order_id ["FOREIGN KEY (order_id) REFERENCES Orders(order_id)"],
+    book_id ["FOREIGN KEY (book_id) REFERENCES Books(book_id)"],
     quantity DOUBLE
 );
 
 
 
-alx_book_store.sql doesn't contain: ["FOREIGN KEY (customer_id) REFERENCES Customers(customer_id)"]
+
 
 
 -- NOTE : - The file extension should be alx_book_store.sql file - All SQL keywords should be in uppercase
