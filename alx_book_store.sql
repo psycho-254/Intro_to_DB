@@ -77,7 +77,7 @@ CREATE TABLE Customers (
 
 CREATE TABLE Orders(
     order_id INT PRIMARY KEY,
-    customer_id INT,
+    customer_id ["FOREIGN KEY (customer_id) REFERENCES Customers(customer_id)"],
     order_date DATE
 );
 
@@ -89,6 +89,11 @@ CREATE TABLE Order_Details (
     book_id INT,
     quantity DOUBLE
 );
+
+
+
+alx_book_store.sql doesn't contain: ["FOREIGN KEY (customer_id) REFERENCES Customers(customer_id)"]
+
 
 -- NOTE : - The file extension should be alx_book_store.sql file - All SQL keywords should be in uppercase
 
